@@ -1,0 +1,7 @@
+{
+  "name": "Mi9 Coding Challenge",
+  "description": "A simple filtering API",
+  "repository": "https://github.com/thomjoy/laughing-octo-computing-machine",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node"]
+}
