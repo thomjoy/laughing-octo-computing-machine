@@ -2,6 +2,8 @@ var express = require('express'),
     compression = require('compression'),
     bodyParser = require('body-parser'),
     api = express(),
+
+    // extract the filtering logic out to a module
     filters = require('./filters');
 
 var errorHandler = function(err, req, res, next) {
@@ -12,6 +14,8 @@ var errorHandler = function(err, req, res, next) {
 api.set('port', (process.env.PORT || 8989));
 
 api.use(compression());
+
+// probably don't need all these bodyParsers...
 api.use(bodyParser.json());
 api.use(bodyParser.urlencoded({ extended: false }));
 api.use(bodyParser.raw());
